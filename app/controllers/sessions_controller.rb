@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 		params[:provider] ? service_route = params[:provider] : service_route = 'No service recognized (invalid callback)'
 		# get the full hash from omniauth
     omniauth = request.env['omniauth.auth']
-    redirect_to home_path
+    redirect_to profile_path
     puts omniauth
 
 	end
