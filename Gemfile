@@ -10,9 +10,12 @@ gem 'databasedotcom'
 gem 'omniauth'
 
 #debugging gem
-gem 'ruby-debug19', :require => 'ruby-debug'
+# gem 'ruby-debug19', :require => 'ruby-debug'
 
 #haml gems
 gem "compass", ">= 0.11.5"
 gem 'haml'
 
+group :test, :development do
+  gem "rspec-rails", "~> 2.6"
+end
