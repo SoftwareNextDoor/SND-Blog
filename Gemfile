@@ -7,6 +7,7 @@ gem 'rails', '3.1.0'
 
 # api connection with salesforce/database.com
 gem 'databasedotcom'
+gem 'omniauth'
 # Use unicorn as the web server
 # gem 'unicorn'
 
