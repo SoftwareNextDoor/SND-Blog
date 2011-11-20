@@ -20,3 +20,6 @@ gem 'haml'
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
 end
+
+#adding widget gem apotomo
+gem 'apotomo', "~>1.1.0"
