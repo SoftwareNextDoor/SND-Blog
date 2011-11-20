@@ -22,4 +22,5 @@ group :test, :development do
 end
 
 #adding widget gem apotomo
-gem 'apotomo', "~>1.1.0"
+gem 'apotomo', '1.2.1'
+gem 'jquery-rails', '>= 1.0.12'
