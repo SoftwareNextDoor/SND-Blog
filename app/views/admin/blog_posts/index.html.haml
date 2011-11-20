@@ -1,0 +1,19 @@
+%h1 Admin::BlogPosts#index
+%p Find me in app/views/admin/blog_posts/index.html.haml
+
+%table
+  %thead
+    %tr
+      %th
+        Blog Post Name
+      %th
+        Edit
+  %tbody
+    - for blog_post in @blog_posts
+      %tr
+        %td
+          = blog_post.Name
+        %td
+          nont available
+
+= link_to "New Blog Post", new_admin_blog_post_path, :class => 'btn primary'

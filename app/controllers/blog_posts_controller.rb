@@ -21,7 +21,7 @@ class BlogPostsController < ApplicationController
  # client.authenticate :token => "my-oauth-token", :instance_url => "https://na12.salesforce.com"  #=> "my-oauth-token"
 
   def index
-  	@blog_posts = Blog_Post__c.all
+    @blog_posts = Blog_Post__c.all
   end
 
   def new
