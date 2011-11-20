@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111120002555) do
+ActiveRecord::Schema.define(:version => 20111120014654) do
 
   create_table "services", :force => true do |t|
     t.datetime "created_at"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20111120002555) do
     t.string   "uemail"
     t.string   "token"
     t.string   "token_refresh"
+    t.string   "type"
   end
 
   create_table "usrs", :force => true do |t|

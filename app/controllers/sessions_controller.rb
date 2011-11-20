@@ -7,15 +7,29 @@ class SessionsController < ApplicationController
     omniauth = request.env['omniauth.auth']
     redirect_to profile_path
     puts omniauth
-
+    @authhash = {}
     if omniauth and params[:provider]
-
-      flash[:sucess] = omniauth
-
+      flash[:success] = omniauth
+      if service_route == 'salesforce'
+        @authhash[:email] = omniauth['info']['email'] || ''
+        usr = Usr.find_by_email(@authhash[:email])
+        if usr
+          @authhash[:username] = omniauth['info']['email'] || ''
+          srv = Service.find_by_username_and_type(@authhash, service_route)
+          if srv
+            srv.token = omniauth['token']
+            srv.save!
+          else
+            @authhash = build_authhash(omniauth)
+            create_service(@authhash)
+          end
+        else
+          @authhash = build_authhash(omniauth)
+          create_usr(@authhash)
+        end
+      end
     else
-      
       fail
-
     end
 
 	end
@@ -32,6 +46,23 @@ class SessionsController < ApplicationController
   def destroy
     sign_out
     redirect_to root_path
+  end
+
+  def create_usr (authhash)
+    debugger
+    u = Usr.new
+    u.name = authhash[:name]
+    u.email = authhash[:email]
+    u.save!
+  end
+
+  def create_service(authhash)
+
+  end
+
+  def build_authhash(omni)
+    @authhash[:name] = omni['info']['name'] || ''
+    return @authhash
   end
 
 end
