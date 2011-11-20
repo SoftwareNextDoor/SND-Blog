@@ -57,6 +57,7 @@ SNDBlog::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
 
   match '/profile' => 'pages#profile'
+  match '/home',    :to => 'pages#home'
 
   match '/signin' => 'sessions#authenticateSF'
   match '/signout' => 'sessions#destroy'

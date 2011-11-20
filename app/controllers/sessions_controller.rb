@@ -8,6 +8,16 @@ class SessionsController < ApplicationController
     redirect_to profile_path
     puts omniauth
 
+    if omniauth and params[:provider]
+
+      flash[:sucess] = omniauth
+
+    else
+      
+      fail
+
+    end
+
 	end
 
 	def authenticateSF
