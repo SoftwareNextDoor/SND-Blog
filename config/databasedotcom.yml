@@ -1,6 +1,6 @@
 host: login.salesforce.com
-client_secret: 
-client_id: 
-username: 
-password: 
+client_id: 3MVG9QDx8IX8nP5SwtQvtqzAB99CDavb1P4cKiCObEawj0ms3fWHjEg6Ho.BTtiBqDsiJoHLKF0awQxBLY0N_
+client_secret: 2781665391102891017
+username: api@softwarenextdoor.com
+password: snd2011sf4JACnvK5SxcN9798kPqx2iLLE
 debug: true	
