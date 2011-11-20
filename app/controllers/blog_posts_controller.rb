@@ -23,7 +23,7 @@ class BlogPostsController < ApplicationController
     	  root << widget(:blog_post)
  	end
   def index
-  	@blog_posts = Blog_Post__c.all
+    @blog_posts = Blog_Post__c.all
   end
 
   def new
