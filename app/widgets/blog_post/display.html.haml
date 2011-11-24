@@ -1,0 +1,18 @@
+= widget_div do
+  %h1 BlogPostWidget#display
+  
+  %p 
+  Find me in app/widgets/blog_post/display.html.haml
+
+  %ul
+  - for blog_post in @blog_posts
+    %li
+      = blog_post.Name
+      = blog_post.OwnerId
+
+
+  = form_tag url_for_event(:submit), :remote => true do
+    = text_field_tag 'text'
+    = text_field_tag 'ownerid'
+
+    = submit_tag "Submit Blog Post"
