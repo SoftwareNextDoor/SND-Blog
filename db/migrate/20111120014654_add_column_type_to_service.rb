@@ -1,9 +1,9 @@
 class AddColumnTypeToService < ActiveRecord::Migration
   def self.up
-  	add_column :services, :type, :string
+    add_column :services, :service_type, :string
   end
 
   def self.down
-  	remove_column :services, :type
+    remove_column :services, :service_type
   end
 end

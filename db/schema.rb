@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20111120014654) do
     t.string   "uemail"
     t.string   "token"
     t.string   "token_refresh"
-    t.string   "type"
+    t.string   "service_type"
   end
 
   create_table "usrs", :force => true do |t|
