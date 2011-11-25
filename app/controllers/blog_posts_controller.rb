@@ -16,23 +16,9 @@
 
 class BlogPostsController < ApplicationController
   include Databasedotcom::Rails::Controller
-
  # client = Databasedotcom::Client.new
  # client.authenticate :token => "my-oauth-token", :instance_url => "https://na12.salesforce.com"  #=> "my-oauth-token"
- 	has_widgets do |root|
-    	  root << widget(:blog_post)
- 	end
   def index
     @blog_posts = Blog_Post__c.all
   end
-
-  def new
-  end
-
-  def create
-  end
-
-  def show
-  end
-
 end

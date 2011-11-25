@@ -1,9 +1,9 @@
 SNDBlog::Application.routes.draw do
   namespace :admin do
-    resources :blog_posts, :only => [:index, :new, :create]
+    resources :blog_posts, :only => :index
   end
 
-  resources :blog_posts, :only => [:index, :show, :new, :create]
+  resources :blog_posts, :only => :index
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
